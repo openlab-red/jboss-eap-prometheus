@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/jboss-eap70-openshift:1.6
+FROM registry.access.redhat.com/jboss-eap-7/eap70-openshift:latest
 
 ADD config.yaml ${JBOSS_HOME}/bin/config.yaml
 
