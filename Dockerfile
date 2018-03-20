@@ -5,5 +5,3 @@ RUN mkdir -p ${JBOSS_HOME}/prometheus \
     -o ${JBOSS_HOME}/prometheus/jmx-prometheus.jar
 
 ADD config.yaml ${JBOSS_HOME}/prometheus/config.yaml
-
-ENV JAVA_OPTS="${JAVA_OPTS} -javaagent:${JBOSS_HOME}/prometheus/jmx-prometheus.jar=8998:${JBOSS_HOME}/prometheus/config.yaml"
