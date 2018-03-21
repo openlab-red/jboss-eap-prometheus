@@ -21,7 +21,9 @@
    
 ```
 
-## Check the target
+## Check the targets in Prometheus
+
+url: https://prometheus-openshift-metrics.example.org/targets
 
 ![](images/service-target.png)
 
