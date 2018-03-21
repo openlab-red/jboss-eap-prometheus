@@ -11,6 +11,7 @@ spec:
       protocol: TCP
       targetPort: 9404
   selector:
-    deploymentConfig: app
+    app: app
+    deploymentconfig: app
   sessionAffinity: None
   type: ClusterIP
