@@ -1,20 +1,29 @@
 # JBoss EAP - JMX Exporter Prometheus Metrics
 
 
+## Build and Deploy
+
 ```
     oc new-build .
     
     oc new-app -i jboss-eap-prometheus --name=app
+```
+
+
+## Active JMX Exporter
     
-    oc create -f prometheus-metrics.svc.yaml
-    
+```
     export JBOSS_HOME=/opt/eap
-    
     oc set env dc/app PREPEND_JAVA_OPTS="-javaagent:${JBOSS_HOME}/prometheus/jmx-prometheus.jar=9404:${JBOSS_HOME}/prometheus/config.yaml"
     
-    # For test metrics
-    oc expose svc prometheus-metrics
+    oc annotate svc/app prometheus.io/scrape='true'
+    oc annotate svc/app prometheus.io/port='9404'
+   
 ```
+
+## Check the target
+
+![](images/service-target.png)
 
 # Reference
 
