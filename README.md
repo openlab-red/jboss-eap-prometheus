@@ -15,3 +15,7 @@
     # For test metrics
     oc expose svc prometheus-metrics
 ```
+
+# Reference
+
+* https://github.com/prometheus/jmx_exporter
