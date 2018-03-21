@@ -6,6 +6,7 @@ metadata:
     prometheus.io/scrape: 'true'
   name: prometheus-metrics
 spec:
+  clusterIP: None
   ports:
     - port: 9404
       protocol: TCP
