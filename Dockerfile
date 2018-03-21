@@ -5,3 +5,5 @@ RUN mkdir -p ${JBOSS_HOME}/prometheus \
     -o ${JBOSS_HOME}/prometheus/jmx-prometheus.jar
 
 ADD config.yaml ${JBOSS_HOME}/prometheus/config.yaml
+
+EXPOSE 9404
